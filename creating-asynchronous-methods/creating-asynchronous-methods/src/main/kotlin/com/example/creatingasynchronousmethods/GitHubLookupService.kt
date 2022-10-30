@@ -17,7 +17,7 @@ class GitHubLookupService(
     @Async
     fun findUser(user: String): CompletableFuture<User> {
         logger.info("Looking up $user")
-        val url = String.format("https://api.github.com/users/%s", user)
+        val url = "https://api.github.com/users/$user"
         val result = restTemplate.getForObject(url, User::class.java)
         Thread.sleep(1000L)
         return CompletableFuture.completedFuture(result)
