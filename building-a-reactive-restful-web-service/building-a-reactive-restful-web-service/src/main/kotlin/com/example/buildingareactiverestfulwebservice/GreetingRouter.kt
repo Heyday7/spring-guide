@@ -13,6 +13,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 class GreetingRouter {
     @Bean
     fun route(greetingHandler: GreetingHandler): RouterFunction<ServerResponse> {
+
         return RouterFunctions
                 .route(
                         GET("/hello").and(accept(MediaType.APPLICATION_JSON)),
