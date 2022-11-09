@@ -11,9 +11,20 @@ class LoadDatabase {
     val log: Logger = LoggerFactory.getLogger(LoadDatabase::class.java)
 
     @Bean
-    fun initDatabase(repository: EmployeeRepository): CommandLineRunner = CommandLineRunner {
-        log.info("Preloading " + repository.save(Employee("Heyday", "7",  "man")))
-        log.info("Preloading " + repository.save(Employee("Snuupy", "ho", "player")))
-        log.info("Preloading " + repository.save(Employee("Snu upy", "player")))
+    fun initDatabase(
+            employeeRepository: EmployeeRepository,
+            orderRepository: OrderRepository
+        ): CommandLineRunner = CommandLineRunner {
+        employeeRepository.save(Employee("Heyday", "7",  "man"))
+        employeeRepository.save(Employee("Snuupy", "ho", "player"))
+
+        employeeRepository.findAll().forEach { employee -> log.info("Preloaded $employee") }
+
+        orderRepository.save(Order("MacBook Pro", Status.COMPLETED))
+        orderRepository.save(Order("iPhone", Status.IN_PROGRESS))
+
+        orderRepository.findAll().forEach { order ->
+            log.info("Preloaded $order")
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.tutorialrest
 
+import org.apache.coyote.Response
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.hateoas.CollectionModel
@@ -29,8 +30,6 @@ class EmployeeController(
 
     @PostMapping("/employees")
     fun newEmployee(@RequestBody newEmployee: Employee): ResponseEntity<EntityModel<Employee>> {
-        log.info(newEmployee.toString())
-
         val entityModel = assembler.toModel(repository.save(newEmployee))
         return ResponseEntity
             .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
@@ -68,7 +67,8 @@ class EmployeeController(
     }
 
     @DeleteMapping("/employees/{id}")
-    fun deleteEmployee(@PathVariable id: Long) {
+    fun deleteEmployee(@PathVariable id: Long): ResponseEntity<Nothing> {
         repository.deleteById(id)
+        return ResponseEntity.noContent().build()
     }
 }
