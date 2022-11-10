@@ -1,0 +1,81 @@
+2022-11-09 17:16:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:17:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:17:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM messages
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:24:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:24:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:32:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:34:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
+2022-11-09 17:36:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGES" not found (this database is empty); SQL statement:
+
+        SELECT * FROM (
+            SELECT * FROM MESSAGES
+            ORDER BY "SENT" DESC
+            LIMIT 10
+        ) ORDER BY "SENT"
+     [42104-214]
