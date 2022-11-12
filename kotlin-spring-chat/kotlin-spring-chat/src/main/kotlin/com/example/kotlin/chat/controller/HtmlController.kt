@@ -12,11 +12,6 @@ class HtmlController(val messageService: MessageService) {
 
     @GetMapping("/")
     suspend fun index(model: Model): String {
-        val messages: List<MessageVM> = messageService.latest()
-
-        model["messages"] = messages
-        model["lastMessageId"] = messages.lastOrNull()?.id ?: ""
-
-        return "chat"
+        return "chatrs"
     }
 }

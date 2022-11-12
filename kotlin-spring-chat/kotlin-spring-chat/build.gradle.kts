@@ -45,6 +45,9 @@ dependencies {
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
 	//
+	implementation("org.springframework.boot:spring-boot-starter-rsocket")
+
+	implementation("app.cash.turbine:turbine:0.4.1")
 }
 
 tasks.withType<Test> {
